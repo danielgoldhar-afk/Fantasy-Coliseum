@@ -1,0 +1,444 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+	
+	@font-face {
+		
+		font-family: 'aeoniktrial-light'; /* A unique name for your font */
+		  src: url('https://fantasycoliseum.com/wp-content/uploads/2025/09/aeoniktrial-light.otf') format('opentype'),
+			 
+		  font-weight: normal; /* Specifies the font's weight (e.g., normal, bold, 400, 700) */
+		  font-style: normal;	
+	}
+	body *:not(i) {
+		font-family: 'aeoniktrial-light' !important
+	}
+
+/* SIDEBAR STYLES */
+.scaled-up-button {
+    color: #fff;
+    padding: 10px 18px;
+    background: #303030;
+    border: unset;
+    transform: scale(1.25, 1.25) translateX(3px);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin: 5px 0;
+    max-width: 216px;
+    min-width: 156px;
+    flex-direction: row;
+    align-items: center;
+    opacity: 1;
+    padding-left: 31px;
+    position: relative;
+    z-index: 11;
+    text-decoration: none !important;
+}
+.scaled-up-button:hover {
+  opacity: 0.8;
+  background: #141414;
+}
+.btn-yellow {
+  background: #FF9500;
+}
+
+/* PAGE BACKGROUND */
+.fc-dashboard-page {
+  background-image: url('https://fantasycoliseum.com/wp-content/uploads/2025/09/Group.png');
+  background-color: #000;
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* OVERLAY + LAYOUT */
+.fc-dashboard-page-overlay {
+  background: linear-gradient(180deg, rgba(255,128,0,0.43) 0%, rgba(0,0,0,1) 70%);
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.fc-dashboard-page-inner {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+}
+.fc-dashboard-page-inner-page {
+  display: flex;
+  height: 100%;
+}
+
+/* SIDEBAR MAIN */
+.fc-dashboard-sidenav {
+    width: 225px;
+    height: 100vh;
+    background-color: #FFFFFF14;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all .3s ease-in-out;
+    overflow: visible !important;
+    position: relative;
+    z-index: 10;
+}
+.fc-dashboard-sidenav::-webkit-scrollbar {
+  display: none;
+}
+
+/* COLLAPSED SIDEBAR */
+.fc-dashboard-sidenav.closed {
+  width: 73px;
+  min-width: 73px;
+  padding: 5px;
+  gap: 10px;
+  padding-top: 15px !important;
+}
+.fc-dashboard-sidenav.closed .scaled-up-button span {
+  display: none;
+}
+.fc-dashboard-sidenav.closed .scaled-up-button {
+  padding: 5px;
+  transform: scale(1.5, 1.8);
+  border-radius: 0 8px 8px 0;
+  margin: 15px 0;
+  justify-content: center;
+	min-width: 5px;
+}
+
+/* HEADINGS */
+.fc-sidebar-heading {
+   font-family: "Heroking", Sans-serif !important;
+  font-size: 20px;
+  color: #fff;
+}
+.fc-sidebar-heading h5 {
+  margin: 5px;
+}
+
+/* LEAGUE GRID */
+.fc-sidebar-league-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+.fc-dashboard-sidenav.closed .fc-sidebar-league-container {
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+
+/* LEAGUE BUTTONS */
+.fc-sidebar-league {
+    background: rgba(255,255,255,0.04);
+    border: 0.3px solid rgba(255,255,255,0.15);
+    width: 95%;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    box-shadow: 0px 6px 19.3px 0px rgba(0,0,0,0.24);
+    transition: transform .3s ease;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.fc-sidebar-league-block {
+    background: rgba(255,255,255,0.04);
+    border: 0.3px solid rgba(255,255,255,0.15);
+    width: 95%;
+    height: 100px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    box-shadow: 0px 6px 19.3px 0px rgba(0,0,0,0.24);
+    transition: transform .3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 0px;
+    gap: 10px;
+}
+
+.fc-sidebar-league-block h5 {
+   margin: 0 !important
+}
+
+.fc-sidebar-league-block img { 
+	width: 70px !important;
+    height: 50px !important;
+	object-fit: contain;
+}
+
+.fc-sidebar-league-mlb {
+    background: rgba(255,255,255,0.04);
+    border: 0.3px solid rgba(255,255,255,0.15);
+    width: 95%;
+    height: 72px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    box-shadow: 0px 6px 19.3px 0px rgba(0,0,0,0.24);
+    transition: transform .3s ease;
+    cursor: pointer;
+		text-decoration: none;
+}
+	.fc-sidebar-league-mlb{
+		gap: 10px !important;
+	}
+/* 	h5{
+		margin:0px;
+	} */
+	
+	.fc-sidebar-league-container .fc-sidebar-league h5{
+		margin: 2px;
+	}
+	.fc-sidebar-league-container .fc-sidebar-league-mlb h5{
+		margin: 2px;
+	}
+	
+	.fc-dashboard-sidenav.closed .fc-sidebar-league-extra h5 {
+		margin: 0px;
+	}
+.fc-sidebar-league:hover{
+  background: #ffa2053b !important;
+}
+	.fc-sidebar-league-mlb:hover {
+  background: #ffa2053b !important;
+}
+	
+	 .fc-sidebar-league.active {
+		   background: #ffa2053b !important;
+	
+	}
+
+.fc-sidebar-league img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+.fc-sidebar-league-mlb img {
+  width: 72px;
+  height: 21px;
+  object-fit: contain;
+}
+
+/* EXTRA LINKS */
+.fc-sidebar-extra-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 100px;
+}
+.fc-sidebar-league-extra {
+  height: 40px;
+  background: rgba(255,255,255,0.08);
+  width: 100%;
+  border-radius: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+  cursor: pointer;
+  border: 0.3px solid rgba(255,255,255,0.15);
+  box-shadow: 0px 4px 12.7px 0px rgba(0,0,0,0.04);
+  gap: 10px !important;
+  padding: 6px 12px;
+  transition: transform .3s ease;
+}
+.fc-sidebar-league-extra:hover {
+  background: #ffa2053b !important;
+}
+
+/* CLOSED STATE EXTRA BUTTONS */
+.fc-dashboard-sidenav.closed .fc-sidebar-league-extra {
+  aspect-ratio: 1/1;
+  border-radius: 12px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 34px;
+  border: 0.3px solid rgba(255,255,255,0.15);
+  box-shadow: 0px 4px 12.7px 0px rgba(0,0,0,0.04);
+  background: #ffffff17;
+}
+
+/* CONTENT AREA */
+.fc-dashboard-content {
+  padding: 20px 60px;
+  flex: 1;
+  overflow-y: auto;
+	display: flex;
+    flex-direction: column;
+}
+.content-area-text h2 {
+  font-size: 48px;
+  color: #fff;
+  margin: 0;
+}
+.content-area-text h5 {
+  font-size: 20px;
+  color: #fff;
+  margin: 0;
+}
+
+/* GAMES GRID */
+.games-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px 0;
+}
+@media (min-width:768px){
+  .games-container { grid-template-columns: repeat(2,1fr); }
+}
+@media (min-width:1024px){
+  .games-container { grid-template-columns: repeat(3,1fr); }
+}
+.game-card {
+  background: rgba(255,255,255,0.12);
+  padding: 15px;
+  border-radius: 12px;
+  border: 0.5px solid rgba(255,255,255,0.15);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.game-time {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+.teams {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.team {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.12);
+  gap: 12px;
+}
+.team img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+.team-info span {
+  font-weight: bold;
+  color: #fff;
+}
+.team-info small {
+  color: #bbb;
+  font-size: 12px;
+}
+.box-score {
+  margin-top: 15px;
+  align-self: flex-end;
+  background: linear-gradient(270deg, #FF9500 0%, #FF8000 100%);
+  box-shadow: 0px 11px 14.6px rgba(0,0,0,0.15);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  gap: 6px;
+  height: 38px;
+}
+.box-score:hover {
+  background: #ff6600;
+}
+	
+	
+	/* FIXED TOP BUTTONS */
+.fc-sidebar-top-buttons {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(4px);
+  padding-bottom: 10px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* SCROLLABLE AREA */
+.fc-sidebar-scroll {
+    display: flex;
+    gap: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1;
+   
+    padding-bottom: 80px;
+    scrollbar-width: none;
+    flex-direction: column;
+}
+.fc-sidebar-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Restore normal overflow on sidebar */
+.fc-dashboard-sidenav {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+	
+.fc-sidebar-first-extra .fc-sidebar-league {
+  display: block; 
+  gap: 0; 
+}
+	
+	
+@media (min-width: 601px) {
+  .fc-sidebar-first-extra .fc-sidebar-league {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+
+
+.fc-page-title {
+	    margin: 0;
+    font-weight: 600;
+    font-family: 'aeoniktrial-light' !important;
+    color: #fff;
+    -webkit-text-stroke: 1px;
+    letter-spacing: 1px;
+	margin-bottom: 5px;
+}
+
+.fc-page-subtitle {
+	   
+    color: #d9d8d8;
+    -webkit-text-stroke: 1px;
+    letter-spacing: 1px;
+	margin-bottom: 10px;
+}
+
+	
